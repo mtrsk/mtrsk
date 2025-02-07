@@ -14,22 +14,28 @@ I'm a software developer and infrastructure engineer, I like my philosophy ~~**U
 
 ```erlang
 -type language() ::
-    coq | elixir | erlang | fsharp | gleam | haskell | nix | python | rust | shell | sql.
+    elixir | erlang | fsharp | gleam | haskell | nix | python | rust | shell | sql.
 -type infra() :: docker | git | kubernetes | make | pulumi | terraform | vault.
--type database() :: postgresql | sqlite.
+-type database() :: postgresql | sqlite | sqlserver.
 -type system() :: nixos.
 -type interests() ::
-    algebra | emacs | functional_programming | logic | relational_databases | linux.
+    algebra |
+    distributed_systems |
+    emacs |
+    functional_programming |
+    logic |
+    relational_databases |
+    linux.
 -type role() :: backend | devops | infra.
 
 -record(description,
         {name = "Marcos Benevides" :: string(),
-         title :: [role],
+         title :: [role(), ...],
          city = "São Luís/MA" :: string(),
          country = "🇧🇷",
-         interests :: [interests()],
-         tools :: [database() | language() | infra()],
-         system :: [system()]}).
+         interests :: [interests(), ...],
+         tools :: [database() | language() | infra(), ...],
+         system :: [system(), ...]}).
 ```
 
 <div align="center">
