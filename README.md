@@ -19,13 +19,13 @@ I'm a software developer and infrastructure engineer, I like my philosophy ~~**U
 -type database() :: postgresql | sqlite | sqlserver.
 -type system() :: nixos.
 -type interests() ::
-    algebra |
+    algebra_driven_design |
     distributed_systems |
     emacs |
     functional_programming |
+    linux |
     logic |
-    relational_databases |
-    linux.
+    relational_databases.
 -type role() :: backend | devops | infra.
 
 -record(description,
